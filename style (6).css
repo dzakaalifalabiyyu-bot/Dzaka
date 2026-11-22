@@ -1,0 +1,359 @@
+/* ------------------------------------------------------------------
+ * Rattan color palette
+ *   straw   - light dried cane
+ *   cane    - golden woven rattan
+ *   honey   - warm varnished rattan
+ *   brown   - rattan pole (main brand color)
+ *   bark    - dark rattan, used for footer and table header
+ *   leaf    - green of the rattan palm, used as an accent
+ * ------------------------------------------------------------------ */
+:root {
+  --rattan-cream: #fdf9f0;
+  --rattan-sand: #f4e8cf;
+  --rattan-straw: #e8d5a8;
+  --rattan-cane: #c8a165;
+  --rattan-honey: #b07d3c;
+  --rattan-brown: #7a5230;
+  --rattan-brown-dark: #5a3b22;
+  --rattan-bark: #3b2a1a;
+  --rattan-ink: #2e2216;
+  --rattan-muted: #7a6a58;
+  --rattan-leaf: #5f6f3e;
+
+  /* Make Bootstrap's own components follow the palette */
+  --bs-body-color: var(--rattan-ink);
+  --bs-body-bg: var(--rattan-cream);
+  --bs-link-color: var(--rattan-brown);
+  --bs-link-hover-color: var(--rattan-brown-dark);
+  --bs-border-color: var(--rattan-straw);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  background-color: var(--rattan-cream);
+  color: var(--rattan-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding-top: 56px;
+}
+
+.text-muted {
+  color: var(--rattan-muted) !important;
+}
+
+.text-leaf {
+  color: var(--rattan-leaf);
+}
+
+/* Woven rattan texture (diagonal weave) used on the hero and footer */
+.weave-texture {
+  background-image:
+    repeating-linear-gradient(45deg, rgba(122, 82, 48, 0.07) 0 2px, transparent 2px 14px),
+    repeating-linear-gradient(-45deg, rgba(122, 82, 48, 0.07) 0 2px, transparent 2px 14px);
+}
+
+/* Brand and buttons */
+.brand-name {
+  color: var(--rattan-brown);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.btn-brand {
+  background-color: var(--rattan-brown);
+  border-color: var(--rattan-brown);
+  color: #fff;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--rattan-brown-dark);
+  border-color: var(--rattan-brown-dark);
+  color: #fff;
+}
+
+.btn-outline-rattan {
+  background-color: transparent;
+  border-color: var(--rattan-brown);
+  color: var(--rattan-brown);
+}
+
+.btn-outline-rattan:hover,
+.btn-outline-rattan:focus,
+.btn-outline-rattan:active,
+.btn-outline-rattan.active {
+  background-color: var(--rattan-brown);
+  border-color: var(--rattan-brown);
+  color: #fff;
+}
+
+.btn:focus-visible,
+.form-check-input:focus,
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--rattan-cane);
+  box-shadow: 0 0 0 0.2rem rgba(200, 161, 101, 0.4);
+}
+
+.form-check-input:checked {
+  background-color: var(--rattan-brown);
+  border-color: var(--rattan-brown);
+}
+
+/* Navbar */
+.navbar-rattan {
+  background-color: var(--rattan-cream);
+  border-bottom: 3px solid var(--rattan-cane);
+}
+
+.navbar .nav-link {
+  color: var(--rattan-bark);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--rattan-honey);
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border-color: var(--rattan-cane);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--rattan-sand);
+  background-image:
+    repeating-linear-gradient(45deg, rgba(122, 82, 48, 0.07) 0 2px, transparent 2px 14px),
+    repeating-linear-gradient(-45deg, rgba(122, 82, 48, 0.07) 0 2px, transparent 2px 14px),
+    linear-gradient(135deg, var(--rattan-sand) 0%, var(--rattan-straw) 100%);
+  padding: 4.5rem 0;
+}
+
+.hero-badge {
+  background-color: var(--rattan-leaf);
+  font-weight: 500;
+}
+
+.hero-image {
+  border: 6px solid #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(90, 59, 34, 0.3);
+  max-width: 460px;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background-color: var(--rattan-sand);
+}
+
+.section-title {
+  color: var(--rattan-brown);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* About stats */
+.stat-card {
+  background-color: var(--rattan-sand);
+  border: 1px solid var(--rattan-straw);
+  border-radius: 1rem;
+  height: 100%;
+  padding: 1.5rem 1rem;
+}
+
+.stat-card i {
+  color: var(--rattan-honey);
+  font-size: 1.75rem;
+}
+
+.stat-card strong {
+  color: var(--rattan-brown-dark);
+  display: block;
+  font-size: 1.75rem;
+}
+
+.stat-card span {
+  color: var(--rattan-muted);
+  font-size: 0.9rem;
+}
+
+/* Product cards */
+.product-card {
+  background-color: #fff;
+  border: 1px solid var(--rattan-straw);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 0.75rem 1.5rem rgba(90, 59, 34, 0.18);
+  transform: translateY(-4px);
+}
+
+.product-card .card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.variant-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.variant-item {
+  align-items: center;
+  border-top: 1px solid var(--rattan-straw);
+  display: flex;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.variant-name {
+  flex: 1 1 auto;
+}
+
+.variant-price {
+  color: var(--rattan-brown-dark);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Availability badges */
+.badge-ready {
+  background-color: var(--rattan-leaf);
+  color: #fff;
+}
+
+.badge-preorder {
+  background-color: var(--rattan-cane);
+  color: var(--rattan-bark);
+}
+
+.badge-soldout {
+  background-color: #8a7f70;
+  color: #fff;
+}
+
+/* Cards and forms in the order calculator */
+#orderForm,
+#resultPanel {
+  background-color: #fff;
+  border: 1px solid var(--rattan-straw);
+  border-radius: 1rem;
+}
+
+.form-control,
+.form-select {
+  border-color: #d9c49a;
+}
+
+/* Order summary */
+.summary-list {
+  display: grid;
+  gap: 0.35rem 1rem;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 1rem;
+}
+
+.summary-list dt {
+  color: var(--rattan-muted);
+  font-weight: 400;
+}
+
+.summary-list dd {
+  font-weight: 600;
+  margin: 0;
+  text-align: right;
+}
+
+.total-box {
+  background: linear-gradient(135deg, var(--rattan-brown) 0%, var(--rattan-brown-dark) 100%);
+  border-radius: 0.75rem;
+  color: #fff;
+  font-size: 1.15rem;
+  padding: 0.9rem 1.1rem;
+}
+
+.total-box strong {
+  font-size: 1.5rem;
+}
+
+.estimate-box {
+  background-color: var(--rattan-sand);
+  border-left: 5px solid var(--rattan-cane);
+  border-radius: 0.75rem;
+  padding: 0.9rem 1.1rem;
+}
+
+.estimate-box i {
+  color: var(--rattan-honey);
+}
+
+/* Shipping table */
+.table-rattan {
+  --bs-table-bg: #fff;
+  --bs-table-hover-bg: var(--rattan-sand);
+  --bs-table-border-color: var(--rattan-straw);
+}
+
+.table-rattan thead th {
+  background-color: var(--rattan-brown-dark);
+  border-color: var(--rattan-brown-dark);
+  color: var(--rattan-sand);
+}
+
+/* FAQ */
+.accordion {
+  --bs-accordion-border-color: var(--rattan-straw);
+  --bs-accordion-active-bg: var(--rattan-sand);
+  --bs-accordion-active-color: var(--rattan-brown-dark);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(200, 161, 101, 0.4);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--rattan-bark);
+  background-image:
+    repeating-linear-gradient(45deg, rgba(232, 213, 168, 0.05) 0 2px, transparent 2px 14px),
+    repeating-linear-gradient(-45deg, rgba(232, 213, 168, 0.05) 0 2px, transparent 2px 14px);
+  border-top: 4px solid var(--rattan-cane);
+  color: #d8c7a8;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer .brand-name,
+.footer h3 {
+  color: var(--rattan-straw) !important;
+}
+
+.footer a {
+  color: var(--rattan-straw);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
